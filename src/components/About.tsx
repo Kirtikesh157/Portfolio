@@ -143,12 +143,15 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { title: "Data Science", items: "Python, Pandas, NumPy, EDA" },
+              { title: "Data Science", items: "Pandas, NumPy, EDA, Data Preprocessing" },
               { title: "Machine Learning", items: "Scikit-learn, Regression, Classification" },
               { title: "Deep Learning", items: "TensorFlow, Neural Networks" },
-              { title: "Generative AI", items: "LLMs, Prompt Engineering, Gemini API" },
+              { title: "Generative AI", items: "LangChain, LLMs, RAG, Prompt Engineering, APIs" },
+              { title: "Frontend", items: "HTML, CSS, Streamlit, JavaScript" },
+              { title: "Backend", items: "Python, Flask, Fast API" },
+              { title: "Enterprise", items: "SAP ABAP, SAP BTP cloud, SAP BTP workspace" },
+              { title: "Databases", items: "SQL, SAP HANA" },
               { title: "Data Visualization", items: "Power BI, Matplotlib, Seaborn" },
-              { title: "Enterprise", items: "SAP ABAP, SQL, MySQL" },
             ].map((c) => (
               <div key={c.title} className="rounded-xl border border-border/60 bg-card/60 p-5 hover:border-primary/50 transition-colors">
                 <h4 className="font-bold mb-2">{c.title}</h4>

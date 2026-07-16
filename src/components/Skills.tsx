@@ -22,6 +22,10 @@ import {
   NotebookPen,
   Laptop,
   Eclipse,
+  Box,
+  Sigma,
+  FlaskConical,
+  MonitorSmartphone,
 } from "lucide-react";
 
 
@@ -112,6 +116,10 @@ const stackRow = [
   // Added Technologies & Tools
   { icon: Cloud, name: "SAP BTP" },
   { icon: Monitor, name: "SAP GUI" },
+  { icon: Box, name: "Pandas" },
+  { icon: Sigma, name: "NumPy" },
+  { icon: FlaskConical, name: "Flask" },
+  { icon: MonitorSmartphone, name: "Streamlit" },
   { icon: Braces, name: "VS Code" },
   { icon: NotebookPen, name: "Jupyter Notebook" },
   { icon: Laptop, name: "Google Colab" },

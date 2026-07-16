@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "@/components/NavLink";
 import { Menu, X, Home, User, Code, Folder, FileText, Mail, Moon,Sun, } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.jpg";
@@ -87,14 +88,15 @@ const Navbar = () => {
           {navLinks.map((link) => {
             const Icon = link.icon;
             return (
-              <a
+              <NavLink
                 key={link.href}
-                href={link.href}
-                className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground rounded-full transition-colors"
+                to={link.href}
+                activeClassName="bg-primary/20 text-primary border border-primary/40 shadow-lg"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-primary/10 transition-all duration-300"
               >
                 <Icon className="h-4 w-4" />
                 {link.label}
-              </a>
+              </NavLink>
             );
           })}
 
@@ -149,15 +151,15 @@ const Navbar = () => {
             {navLinks.map((link) => {
               const Icon = link.icon;
               return (
-                <a
+                <NavLink
                   key={link.href}
-                  href={link.href}
-                  className="flex items-center gap-2.5 text-muted-foreground hover:text-foreground hover:bg-muted transition-colors font-medium py-2 px-3 rounded-lg"
+                  to={link.href}
+                  className="flex items-center gap-2.5 py-2 px-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-primary/10 transition-all"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <Icon className="h-4 w-4" />
                   {link.label}
-                </a>
+                </NavLink>
               );
             })}
 

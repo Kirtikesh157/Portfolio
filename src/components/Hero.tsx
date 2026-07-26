@@ -14,7 +14,7 @@ import {
   Server,
 } from "lucide-react";
 
-const roles = ["Data Scientist", "AI Engineer", "ABAP Developer"];
+const roles = ["Software Engineer ", "Data Scientist", "AI Engineer", "ABAP Developer"];
 
 
 const techCards = [
@@ -110,7 +110,7 @@ const Hero = () => {
               Kirtikesh Bhoyar
             </h1>
 
-            <p className="text-lg sm:text-xl text-primary font-mono mb-6 min-h-[1.75em]">
+            <p className="text-lg sm:text-xl text-primary font-mono mb-6 min-h-[1.75em]"> 
               <span className="text-muted-foreground">&gt;</span> {displayText}
               <span className="animate-pulse">_</span>
             </p>

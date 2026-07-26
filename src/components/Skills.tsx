@@ -1,4 +1,4 @@
-import { SiSap } from "react-icons/si";
+import { SiSap, SiGithub, SiPycharm } from "react-icons/si";
 
 import {
   Brain,
@@ -51,46 +51,51 @@ const orbitInner = [
 ];
 
 const modules = [
+
+  
   {
     id: "MOD.01",
-    title: "Data Science & ML",
+    title: "Programming & Databases",
+    icon: Code2,
+    items: [
+      { icon: Code2, name: "Python" },
+      { icon: Code, name: "HTML" },
+      { icon: Palette, name: "CSS" },
+      { icon: FileCode, name: "SAP ABAP "},
+      { icon: Database, name: "MySQL" },
+      { icon: Database, name: "SAP HANA" },
+    ],
+  },
+
+  {
+    id: "MOD.02",
+    title: "AI & ML",
     icon: Brain,
     items: [
       { icon: Brain, name: "Machine Learning" },
       { icon: Layers, name: "Deep Learning" },
       { icon: BarChart3, name: "Data Analysis" },
+      { icon: Sparkles, name: "Artificial Intelligence" },
+      { icon: Wand2, name: "Generative AI" },
       { icon: MessageSquare, name: "NLP" },
     ],
   },
-  {
-    id: "MOD.02",
-    title: "AI & Generative AI",
-    icon: Sparkles,
-    items: [
-      { icon: Sparkles, name: "Artificial Intelligence" },
-      { icon: Wand2, name: "Generative AI" },
-      { icon: Bot, name: "LLMs" },
-      { icon: Search, name: "RAG" },
-    ],
-  },
+
+
   {
     id: "MOD.03",
-    title: "Programming & Data",
-    icon: Code2,
-    items: [
-      { icon: Code2, name: "Python" },
-      { icon: Database, name: "SQL" },
-      { icon: FileCode, name: "SAP ABAP" },
-    ],
-  },
-  {
-    id: "MOD.04",
-    title: "Web & Visualization",
-    icon: LineChart,
+    title: "Tools & Platforms",
+    icon: Monitor,
     items: [
       { icon: LineChart, name: "Power BI" },
-      { icon: Code, name: "HTML" },
-      { icon: Palette, name: "CSS" },
+      { icon: Cloud, name: "SAP BTP" },
+      { icon: Monitor, name: "SAP GUI" },
+      { icon: Braces, name: "Visual Studio Code" },
+      { icon: NotebookPen, name: "Jupyter Notebook" },
+      { icon: Laptop, name: "Google Colab" },
+      { icon: Eclipse, name: "Eclipse IDE" },
+      { icon: SiPycharm, name: "PyCharm" },
+      { icon: SiGithub, name: "GitHub" },
     ],
   },
 ];
@@ -106,7 +111,6 @@ const stackRow = [
   { icon: BarChart3, name: "Data Analysis" },
   { icon: Code2, name: "Python" },
   { icon: Database, name: "SQL" },
-  { icon: LineChart, name: "Power BI" },
   { icon: Code, name: "HTML" },
   { icon: Palette, name: "CSS" },
   { icon: Server, name: "ERP" },
@@ -114,16 +118,20 @@ const stackRow = [
   { icon: FileCode, name: "SAP ABAP" },
 
   // Added Technologies & Tools
-  { icon: Cloud, name: "SAP BTP" },
-  { icon: Monitor, name: "SAP GUI" },
+
   { icon: Box, name: "Pandas" },
   { icon: Sigma, name: "NumPy" },
   { icon: FlaskConical, name: "Flask" },
-  { icon: MonitorSmartphone, name: "Streamlit" },
-  { icon: Braces, name: "VS Code" },
   { icon: NotebookPen, name: "Jupyter Notebook" },
+  { icon: LineChart, name: "Power BI" },
+  { icon: MonitorSmartphone, name: "Streamlit" },
+  { icon: Cloud, name: "SAP BTP" },
+  { icon: Monitor, name: "SAP GUI" },
+  { icon: Braces, name: "VS Code" },
   { icon: Laptop, name: "Google Colab" },
   { icon: Eclipse, name: "Eclipse IDE" },
+  { icon: SiPycharm, name: "PyCharm" },
+  { icon: SiGithub, name: "GitHub" },
 
 ];
 
@@ -163,11 +171,11 @@ const Skills = () => {
 
 
         {/* Modules grid */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 justify-items-center">
           {modules.map(({ id, title, icon: Icon, items }) => (
             <div
               key={id}
-              className="rounded-2xl border border-border bg-gradient-card p-6 hover:border-primary/50 transition-colors"
+              className="w-full md:w-[800px] rounded-2xl border border-border bg-gradient-card p-6 hover:border-primary/50 transition-colors"
             >
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">

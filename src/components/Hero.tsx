@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Download,
@@ -121,24 +122,42 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start">
-              <Button size="lg" className="bg-gradient-hero animate-gradient hover:opacity-90 shadow-elegant" asChild>
-                <a href="/projects">
+              <Button
+                size="lg"
+                className="bg-gradient-hero animate-gradient hover:opacity-90 shadow-elegant"
+                asChild
+              >
+                <Link to="/projects">
                   View Projects
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary/40 hover:bg-primary/10" asChild>
-                <a href="/resume">
+
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary/40 hover:bg-primary/10"
+                asChild
+              >
+                <Link to="/resume">
                   <Download className="mr-2 h-4 w-4" />
                   Resume
-                </a>
+                </Link>
               </Button>
-              <Button size="lg" variant="ghost" className="hover:bg-primary/10" asChild>
-                <a href="/contact">
+
+              <Button
+                size="lg"
+                variant="ghost"
+                className="hover:bg-primary/10"
+                asChild
+              >
+                <Link to="/contact">
                   <Mail className="mr-2 h-4 w-4" />
                   Get in Touch
-                </a>
+                </Link>
               </Button>
+
+
             </div>
           </div>
 
